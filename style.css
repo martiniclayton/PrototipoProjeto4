@@ -207,7 +207,7 @@ header{
 
   .banner{
     text-align: center;
-    background-image: url(../img/bannerBannerBanner.png);
+    background-image: url(bannerBannerBanner.png);
     height: 300px;
     color: white;
     display: flex;
