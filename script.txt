@@ -1,0 +1,52 @@
+var carrinhoVisivel = false;
+
+if(document.readyState=="loading"){
+    document.addEventListener("DOMContentLoaded", ready)
+}else{
+    ready();
+}
+
+function ready(){
+    var botoesEliminarItens = document.getElementsByClassName("eliminar-carrinho");
+    for(var i= 0; i<botoesEliminarItens.length; i++){
+        var button = botoesEliminarItens[i];
+        button.addEventListener('click', eliminarItemCarrinho);
+    }
+}
+function eliminarItemCarrinho(event){
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove();
+
+    atualizarTotalCarrinho();
+}
+
+function atualizarTotalCarrinho(){
+    var carrinhoConteiner = document.getElementsByClassName("carrinho")[0];
+    var carrinhoItens = document.getElementsByClassName("quantidade");
+    var total=0;
+
+    for(var i=0; i< carrinhoItens.length; i++){
+        var item = carrinhoItens[i];
+        var precoPizza = item.getElementsByClassName("preco-carrinho")[0];
+        console.log(precoPizza);
+        var preco = parseFloat(precoPizza.innerText.replace("R$","").replace(",",""));
+        console.log(preco);
+
+        if (precoPizza) {
+            var precoTexto = precoPizza.innerText
+                .replace("R$", "")       // remove símbolo
+                .replace(/\s/g, "");     // remove espaços
+
+            // Se tiver vírgula, troca por ponto
+            if (precoTexto.includes(",")) {
+                precoTexto = precoTexto.replace(",", ".");
+            }
+
+            var preco = parseFloat(precoTexto);
+
+            console.log(preco);
+        }}
+        var quantidadeItens = document.getElementsByClassName("carrinho-item-quantidade")[0];
+        var quantidade = quantidadeItens.value; 
+        console.log(quantidade);
+}

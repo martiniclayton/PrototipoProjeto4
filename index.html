@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bela Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script/script.js" async></script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <header id="cabeçalho">
+        <div class="logoTopo">
+            <img src="img/logopng.png" width="200">
+        </div>
+        <div class="botoesNav">
+            <a href=""><button>Início</button></a>
+            <a href=""><button>Quem Somos</button></a>
+            <a href=""><button>Contato</button></a>
+        </div>
+        <div class="menuTopo">
+            <button id="botaoLogin">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+    </header>
+    <dialog id="modalLogin">
+        <div class="login">
+            <div class="logoLogin">
+                <h1>Login</h1>
+            </div>
+            <div class="form">
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="E-mail ou número de telefone">
+                </div>
+                <div class="user">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" placeholder="Senha">
+                </div>
+                <p>Esqueceu a senha?<a href="recuperacaoSenha.html" id="abrir-modal-redefinir"> Redefina aqui</a></p>
+                <button>Entrar</button>
+                <br>
+                <br>
+                <button><img src="img/Google.png" width="20">Continuar com Google</button>
+                <button><img src="img/Apple.png" width="20">Continuar com Apple</button>
+                <hr>
+                <div class="jaConta">
+                    <p>Não tem conta? <a href="">Crie uma aqui</a></p>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <div class="banner">
+        <h3>Tradição, Qualidade e Sabor</h3>
+        <p>Todas as nossas pizzas são feitas com bastante carinho e tradicionalidade</p>
+    </div>
+    <div class="titulo-pizza">
+        <h1>Pizzas</h1>
+    </div>
+    <section class="corpo">
+        <div class="conteiner-pizzas">
+            <div class="pizzas">
+                <h2>Frango</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 72,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Frango', 72.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Calabreza</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 79,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Calabresa', 79.99)">Adicionar ao Carrinho</button>
+
+            </div>
+            <div class="pizzas">
+                <h2>Portuguesa</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 69,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Portuguesa', 69.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Peito de Peru</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 72,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Peito de Peru', 72.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Marguerita</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 79,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Marguerita', 79.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Presunto</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 69,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Presunto', 69.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Bacon</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 79,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Bacon', 79.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Pepperoni</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 89,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Pepperoni', 89.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="pizzas">
+                <h2>Lombo</h2>
+                <img src="img/pizza.png" width="150" alt="">
+                <p>Essa é uma bela pizza feita com tais ingredientes, acompanhada de tais ingredientes</p>
+                <span class="valor-pizza">R$ 65,99</span>
+                <button class="botao-adcpizza" onclick="adicionarAoCarrinho('Lombo', 65.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        <div class="carrinho">
+            <div class="header-carrinho">
+                <h3>Carrinho</h3>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="corpo-carrinho">
+                <table>
+                    <thead>
+                        <th>Item</th>
+                        <th>Preço</th>
+                        <th>Remover</th>
+                    </thead>
+                    <tbody id="cart"></tbody>
+                </table>
+            </div>
+            <div class="valorpizza">
+                <h4 id="total">Total: R$ 0,00</h4>
+            </div>
+            <div class="finalizar-pedido">
+                <button>Finalizar Pedido <i class="fa-solid fa-lock"></i></button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="rodape">
+            <div class="logoRodape">
+                <img src="img/logopizza.png" alt="" width="200">
+            </div>
+            <div class="conteiner-info">
+                <div class="info">
+                    <h3>Atendimento</h3>
+                    <p>jasjdnasnjdnasjbdbaskjd</p>
+                    <h4>Bela Pizza Delivery</h4>
+                    <p>(11) 99999-9999</p>
+                    <h4>E-mail</h4>
+                    <p>asdasdS@asdasd.com</p>
+                    <br>
+                    <p>Atendimento todos os dias das 17h às 02h</p>
+                </div>
+                <div class="redes">
+                    <h4>Acesse Nossas Redes Socias</h4>
+                    <button><img src="img/logoInstagram.png" width="50" alt=""></button>
+                    <button><img src="img/logoFacebook.png" width="50" alt=""></button>
+                    <button><img src="img/logoWhatapp.png" width="50" alt=""></button>
+                </div>
+            </div>
+            <div class="final-rodape">
+                Todos os Direitos Reservados
+            </div>
+        </div>
+    </footer>
+    <script>
+        const buttonOpenLogin = document.querySelector("#botaoLogin")
+        const modalLogin = document.querySelector("#modalLogin")
+        const overlay = document.querySelector("#overlay")
+
+        buttonOpenLogin.onclick = function(){
+            modalLogin.showModal();
+            overlay.style.display = "block";
+        }
+        modalLogin.addEventListener("close", (e) =>{
+            overlay.style.display ="none";
+        })
+
+        window.addEventListener("click", (e) =>{
+            if(e.target === modalLogin){
+            modalLogin.close()
+            overlay.style.display = "none";
+            }
+        })
+
+        let cart =[]
+        let total = 0;
+
+        function adicionarAoCarrinho(item, preco){
+            cart.push({item:item, preco:preco});
+            total += preco;
+            atualizarCarrinho()
+        }
+
+        function atualizarCarrinho(){
+            const cartList = document.getElementById("cart");
+            const totalElement = document.getElementById("total");
+
+            cartList.innerHTML="";
+
+            cart.forEach((item, index) => {
+                const row = document.createElement("tr");
+                const itemColuna = document.createElement("td");
+                itemColuna.textContent = item.item;
+                
+                const precoColuna = document.createElement("td")
+                precoColuna.textContent = `R$ ${item.preco.toFixed(2)}`;
+
+                const botaoRemoverColuna = document.createElement("td");
+                const remove = document.createElement("button");
+                remove.textContent = "Remover";
+
+                remove.addEventListener("click", () =>{
+                    total -= item.preco;
+                    cart.splice(index, 1);
+                    atualizarCarrinho()
+                })
+
+                botaoRemoverColuna.appendChild(remove);
+
+                row.appendChild(itemColuna);
+                row.appendChild(precoColuna);
+                row.appendChild(botaoRemoverColuna);
+
+                cartList.appendChild(row)
+            })
+
+            totalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
